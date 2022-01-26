@@ -1139,7 +1139,7 @@ class QColorDialog(PySide2.QtWidgets.QDialog):
     def testOption(self, option: PySide2.QtWidgets.QColorDialog.ColorDialogOption) -> bool: ...
 
 
-class QColormap(Shiboken.Object):
+class QColormap(object):
     Direct                   : QColormap = ... # 0x0
     Indexed                  : QColormap = ... # 0x1
     Gray                     : QColormap = ... # 0x2
@@ -2089,7 +2089,7 @@ class QFileDialog(PySide2.QtWidgets.QDialog):
     def viewMode(self) -> PySide2.QtWidgets.QFileDialog.ViewMode: ...
 
 
-class QFileIconProvider(Shiboken.Object):
+class QFileIconProvider(object):
     Computer                 : QFileIconProvider = ... # 0x0
     Desktop                  : QFileIconProvider = ... # 0x1
     DontUseCustomDirectoryIcons: QFileIconProvider = ... # 0x1
@@ -2503,7 +2503,7 @@ class QGestureEvent(PySide2.QtCore.QEvent):
     def widget(self) -> PySide2.QtWidgets.QWidget: ...
 
 
-class QGestureRecognizer(Shiboken.Object):
+class QGestureRecognizer(object):
     Ignore                   : QGestureRecognizer = ... # 0x1
     MayBeGesture             : QGestureRecognizer = ... # 0x2
     TriggerGesture           : QGestureRecognizer = ... # 0x4
@@ -2742,7 +2742,7 @@ class QGraphicsGridLayout(PySide2.QtWidgets.QGraphicsLayout):
     def verticalSpacing(self) -> float: ...
 
 
-class QGraphicsItem(Shiboken.Object):
+class QGraphicsItem(object):
     ItemPositionChange       : QGraphicsItem = ... # 0x0
     NoCache                  : QGraphicsItem = ... # 0x0
     NonModal                 : QGraphicsItem = ... # 0x0
@@ -3218,7 +3218,7 @@ class QGraphicsLayout(PySide2.QtWidgets.QGraphicsLayoutItem):
     def widgetEvent(self, e: PySide2.QtCore.QEvent) -> None: ...
 
 
-class QGraphicsLayoutItem(Shiboken.Object):
+class QGraphicsLayoutItem(object):
 
     def __init__(self, parent: typing.Optional[PySide2.QtWidgets.QGraphicsLayoutItem] = ..., isLayout: bool = ...) -> None: ...
 
@@ -4555,7 +4555,7 @@ class QItemDelegate(PySide2.QtWidgets.QAbstractItemDelegate):
     def updateEditorGeometry(self, editor: PySide2.QtWidgets.QWidget, option: PySide2.QtWidgets.QStyleOptionViewItem, index: PySide2.QtCore.QModelIndex) -> None: ...
 
 
-class QItemEditorCreatorBase(Shiboken.Object):
+class QItemEditorCreatorBase(object):
 
     def __init__(self) -> None: ...
 
@@ -4563,7 +4563,7 @@ class QItemEditorCreatorBase(Shiboken.Object):
     def valuePropertyName(self) -> PySide2.QtCore.QByteArray: ...
 
 
-class QItemEditorFactory(Shiboken.Object):
+class QItemEditorFactory(object):
 
     def __init__(self) -> None: ...
 
@@ -4801,7 +4801,7 @@ class QLayout(PySide2.QtCore.QObject, PySide2.QtWidgets.QLayoutItem):
     def widgetEvent(self, arg__1: PySide2.QtCore.QEvent) -> None: ...
 
 
-class QLayoutItem(Shiboken.Object):
+class QLayoutItem(object):
 
     def __init__(self, alignment: PySide2.QtCore.Qt.Alignment = ...) -> None: ...
 
@@ -5125,7 +5125,7 @@ class QListWidget(PySide2.QtWidgets.QListView):
     def visualItemRect(self, item: PySide2.QtWidgets.QListWidgetItem) -> PySide2.QtCore.QRect: ...
 
 
-class QListWidgetItem(Shiboken.Object):
+class QListWidgetItem(object):
     Type                     : QListWidgetItem = ... # 0x0
     UserType                 : QListWidgetItem = ... # 0x3e8
 
@@ -6276,7 +6276,7 @@ class QScroller(PySide2.QtCore.QObject):
     def velocity(self) -> PySide2.QtCore.QPointF: ...
 
 
-class QScrollerProperties(Shiboken.Object):
+class QScrollerProperties(object):
     MousePressEventDelay     : QScrollerProperties = ... # 0x0
     OvershootWhenScrollable  : QScrollerProperties = ... # 0x0
     Standard                 : QScrollerProperties = ... # 0x0
@@ -6396,7 +6396,7 @@ class QSizeGrip(PySide2.QtWidgets.QWidget):
     def sizeHint(self) -> PySide2.QtCore.QSize: ...
 
 
-class QSizePolicy(Shiboken.Object):
+class QSizePolicy(object):
     Fixed                    : QSizePolicy = ... # 0x0
     DefaultType              : QSizePolicy = ... # 0x1
     GrowFlag                 : QSizePolicy = ... # 0x1
@@ -7939,7 +7939,7 @@ class QStyle(PySide2.QtCore.QObject):
     def visualRect(direction: PySide2.QtCore.Qt.LayoutDirection, boundingRect: PySide2.QtCore.QRect, logicalRect: PySide2.QtCore.QRect) -> PySide2.QtCore.QRect: ...
 
 
-class QStyleFactory(Shiboken.Object):
+class QStyleFactory(object):
 
     def __init__(self) -> None: ...
 
@@ -7949,7 +7949,7 @@ class QStyleFactory(Shiboken.Object):
     def keys() -> typing.List[str]: ...
 
 
-class QStyleHintReturn(Shiboken.Object):
+class QStyleHintReturn(object):
     Version                  : QStyleHintReturn = ... # 0x1
     SH_Default               : QStyleHintReturn = ... # 0xf000
     Type                     : QStyleHintReturn = ... # 0xf000
@@ -7996,7 +7996,7 @@ class QStyleHintReturnVariant(PySide2.QtWidgets.QStyleHintReturn):
     def __init__(self) -> None: ...
 
 
-class QStyleOption(Shiboken.Object):
+class QStyleOption(object):
     SO_Default               : QStyleOption = ... # 0x0
     Type                     : QStyleOption = ... # 0x0
     SO_FocusRect             : QStyleOption = ... # 0x1
@@ -9180,7 +9180,7 @@ class QTableWidget(PySide2.QtWidgets.QTableView):
     def visualRow(self, logicalRow: int) -> int: ...
 
 
-class QTableWidgetItem(Shiboken.Object):
+class QTableWidgetItem(object):
     Type                     : QTableWidgetItem = ... # 0x0
     UserType                 : QTableWidgetItem = ... # 0x3e8
 
@@ -9240,7 +9240,7 @@ class QTableWidgetItem(Shiboken.Object):
     def write(self, out: PySide2.QtCore.QDataStream) -> None: ...
 
 
-class QTableWidgetSelectionRange(Shiboken.Object):
+class QTableWidgetSelectionRange(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -9334,7 +9334,7 @@ class QTextEdit(PySide2.QtWidgets.QAbstractScrollArea):
         AutoBulletList           : QTextEdit.AutoFormattingFlag = ... # 0x1
         AutoAll                  : QTextEdit.AutoFormattingFlag = ... # -0x1
 
-    class ExtraSelection(Shiboken.Object):
+    class ExtraSelection(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -9487,7 +9487,7 @@ class QTextEdit(PySide2.QtWidgets.QAbstractScrollArea):
     def zoomOut(self, range: int = ...) -> None: ...
 
 
-class QTileRules(Shiboken.Object):
+class QTileRules(object):
 
     @typing.overload
     def __init__(self, QTileRules: PySide2.QtWidgets.QTileRules) -> None: ...
@@ -9634,7 +9634,7 @@ class QToolButton(PySide2.QtWidgets.QAbstractButton):
     def toolButtonStyle(self) -> PySide2.QtCore.Qt.ToolButtonStyle: ...
 
 
-class QToolTip(Shiboken.Object):
+class QToolTip(object):
     @staticmethod
     def font() -> PySide2.QtGui.QFont: ...
     @staticmethod
@@ -9846,7 +9846,7 @@ class QTreeWidget(PySide2.QtWidgets.QTreeView):
     def visualItemRect(self, item: PySide2.QtWidgets.QTreeWidgetItem) -> PySide2.QtCore.QRect: ...
 
 
-class QTreeWidgetItem(Shiboken.Object):
+class QTreeWidgetItem(object):
     ShowIndicator            : QTreeWidgetItem = ... # 0x0
     Type                     : QTreeWidgetItem = ... # 0x0
     DontShowIndicator        : QTreeWidgetItem = ... # 0x1
@@ -9946,7 +9946,7 @@ class QTreeWidgetItem(Shiboken.Object):
     def write(self, out: PySide2.QtCore.QDataStream) -> None: ...
 
 
-class QTreeWidgetItemIterator(Shiboken.Object):
+class QTreeWidgetItemIterator(object):
     All                      : QTreeWidgetItemIterator = ... # 0x0
     Hidden                   : QTreeWidgetItemIterator = ... # 0x1
     NotHidden                : QTreeWidgetItemIterator = ... # 0x2
@@ -10008,7 +10008,7 @@ class QTreeWidgetItemIterator(Shiboken.Object):
     def value(self) -> PySide2.QtWidgets.QTreeWidgetItem: ...
 
 
-class QUndoCommand(Shiboken.Object):
+class QUndoCommand(object):
 
     @typing.overload
     def __init__(self, parent: typing.Optional[PySide2.QtWidgets.QUndoCommand] = ...) -> None: ...
@@ -10106,7 +10106,7 @@ class QVBoxLayout(PySide2.QtWidgets.QBoxLayout):
     def __init__(self, parent: PySide2.QtWidgets.QWidget) -> None: ...
 
 
-class QWhatsThis(Shiboken.Object):
+class QWhatsThis(object):
     @staticmethod
     def createAction(parent: typing.Optional[PySide2.QtCore.QObject] = ...) -> PySide2.QtWidgets.QAction: ...
     @staticmethod

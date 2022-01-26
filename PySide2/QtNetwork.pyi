@@ -259,7 +259,7 @@ class QAbstractSocket(PySide2.QtCore.QIODevice):
     def writeData(self, data: bytes, len: int) -> int: ...
 
 
-class QAuthenticator(Shiboken.Object):
+class QAuthenticator(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -280,7 +280,7 @@ class QAuthenticator(Shiboken.Object):
     def user(self) -> str: ...
 
 
-class QDnsDomainNameRecord(Shiboken.Object):
+class QDnsDomainNameRecord(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -295,7 +295,7 @@ class QDnsDomainNameRecord(Shiboken.Object):
     def value(self) -> str: ...
 
 
-class QDnsHostAddressRecord(Shiboken.Object):
+class QDnsHostAddressRecord(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -377,7 +377,7 @@ class QDnsLookup(PySide2.QtCore.QObject):
     def type(self) -> PySide2.QtNetwork.QDnsLookup.Type: ...
 
 
-class QDnsMailExchangeRecord(Shiboken.Object):
+class QDnsMailExchangeRecord(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -393,7 +393,7 @@ class QDnsMailExchangeRecord(Shiboken.Object):
     def timeToLive(self) -> int: ...
 
 
-class QDnsServiceRecord(Shiboken.Object):
+class QDnsServiceRecord(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -411,7 +411,7 @@ class QDnsServiceRecord(Shiboken.Object):
     def weight(self) -> int: ...
 
 
-class QDnsTextRecord(Shiboken.Object):
+class QDnsTextRecord(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -479,7 +479,7 @@ class QDtlsError(object):
     TlsNonFatalError         : QDtlsError = ... # 0x8
 
 
-class QHostAddress(Shiboken.Object):
+class QHostAddress(object):
     Null                     : QHostAddress = ... # 0x0
     StrictConversion         : QHostAddress = ... # 0x0
     Broadcast                : QHostAddress = ... # 0x1
@@ -566,7 +566,7 @@ class QHostAddress(Shiboken.Object):
     def toString(self) -> str: ...
 
 
-class QHostInfo(Shiboken.Object):
+class QHostInfo(object):
     NoError                  : QHostInfo = ... # 0x0
     HostNotFound             : QHostInfo = ... # 0x1
     UnknownError             : QHostInfo = ... # 0x2
@@ -604,7 +604,7 @@ class QHostInfo(Shiboken.Object):
     def swap(self, other: PySide2.QtNetwork.QHostInfo) -> None: ...
 
 
-class QHstsPolicy(Shiboken.Object):
+class QHstsPolicy(object):
     IncludeSubDomains        : QHstsPolicy = ... # 0x1
 
     class PolicyFlag(object):
@@ -654,7 +654,7 @@ class QHttpMultiPart(PySide2.QtCore.QObject):
     def setContentType(self, contentType: PySide2.QtNetwork.QHttpMultiPart.ContentType) -> None: ...
 
 
-class QHttpPart(Shiboken.Object):
+class QHttpPart(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -670,7 +670,7 @@ class QHttpPart(Shiboken.Object):
     def swap(self, other: PySide2.QtNetwork.QHttpPart) -> None: ...
 
 
-class QIPv6Address(Shiboken.Object):
+class QIPv6Address(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -877,7 +877,7 @@ class QNetworkAccessManager(PySide2.QtCore.QObject):
     def transferTimeout(self) -> int: ...
 
 
-class QNetworkAddressEntry(Shiboken.Object):
+class QNetworkAddressEntry(object):
     DnsEligibilityUnknown    : QNetworkAddressEntry = ... # -0x1
     DnsIneligible            : QNetworkAddressEntry = ... # 0x0
     DnsEligible              : QNetworkAddressEntry = ... # 0x1
@@ -914,7 +914,7 @@ class QNetworkAddressEntry(Shiboken.Object):
     def validityLifetime(self) -> PySide2.QtCore.QDeadlineTimer: ...
 
 
-class QNetworkCacheMetaData(Shiboken.Object):
+class QNetworkCacheMetaData(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -941,7 +941,7 @@ class QNetworkCacheMetaData(Shiboken.Object):
     def url(self) -> PySide2.QtCore.QUrl: ...
 
 
-class QNetworkConfiguration(Shiboken.Object):
+class QNetworkConfiguration(object):
     BearerUnknown            : QNetworkConfiguration = ... # 0x0
     InternetAccessPoint      : QNetworkConfiguration = ... # 0x0
     UnknownPurpose           : QNetworkConfiguration = ... # 0x0
@@ -1056,7 +1056,7 @@ class QNetworkConfigurationManager(PySide2.QtCore.QObject):
     def updateConfigurations(self) -> None: ...
 
 
-class QNetworkCookie(Shiboken.Object):
+class QNetworkCookie(object):
     NameAndValueOnly         : QNetworkCookie = ... # 0x0
     Full                     : QNetworkCookie = ... # 0x1
 
@@ -1108,7 +1108,7 @@ class QNetworkCookieJar(PySide2.QtCore.QObject):
     def validateCookie(self, cookie: PySide2.QtNetwork.QNetworkCookie, url: PySide2.QtCore.QUrl) -> bool: ...
 
 
-class QNetworkDatagram(Shiboken.Object):
+class QNetworkDatagram(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -1158,7 +1158,7 @@ class QNetworkDiskCache(PySide2.QtNetwork.QAbstractNetworkCache):
     def updateMetaData(self, metaData: PySide2.QtNetwork.QNetworkCacheMetaData) -> None: ...
 
 
-class QNetworkInterface(Shiboken.Object):
+class QNetworkInterface(object):
     Unknown                  : QNetworkInterface = ... # 0x0
     IsUp                     : QNetworkInterface = ... # 0x1
     Loopback                 : QNetworkInterface = ... # 0x1
@@ -1239,7 +1239,7 @@ class QNetworkInterface(Shiboken.Object):
     def type(self) -> PySide2.QtNetwork.QNetworkInterface.InterfaceType: ...
 
 
-class QNetworkProxy(Shiboken.Object):
+class QNetworkProxy(object):
     DefaultProxy             : QNetworkProxy = ... # 0x0
     Socks5Proxy              : QNetworkProxy = ... # 0x1
     TunnelingCapability      : QNetworkProxy = ... # 0x1
@@ -1309,7 +1309,7 @@ class QNetworkProxy(Shiboken.Object):
     def user(self) -> str: ...
 
 
-class QNetworkProxyFactory(Shiboken.Object):
+class QNetworkProxyFactory(object):
 
     def __init__(self) -> None: ...
 
@@ -1326,7 +1326,7 @@ class QNetworkProxyFactory(Shiboken.Object):
     def usesSystemConfiguration() -> bool: ...
 
 
-class QNetworkProxyQuery(Shiboken.Object):
+class QNetworkProxyQuery(object):
     TcpSocket                : QNetworkProxyQuery = ... # 0x0
     UdpSocket                : QNetworkProxyQuery = ... # 0x1
     SctpSocket               : QNetworkProxyQuery = ... # 0x2
@@ -1490,7 +1490,7 @@ class QNetworkReply(PySide2.QtCore.QIODevice):
     def writeData(self, data: bytes, len: int) -> int: ...
 
 
-class QNetworkRequest(Shiboken.Object):
+class QNetworkRequest(object):
     AlwaysNetwork            : QNetworkRequest = ... # 0x0
     Automatic                : QNetworkRequest = ... # 0x0
     ContentTypeHeader        : QNetworkRequest = ... # 0x0
@@ -1730,7 +1730,7 @@ class QOcspCertificateStatus(object):
     Unknown                  : QOcspCertificateStatus = ... # 0x2
 
 
-class QOcspResponse(Shiboken.Object):
+class QOcspResponse(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -1757,14 +1757,14 @@ class QOcspRevocationReason(object):
     RemoveFromCRL            : QOcspRevocationReason = ... # 0x7
 
 
-class QPasswordDigestor(Shiboken.Object):
+class QPasswordDigestor(object):
     @staticmethod
     def deriveKeyPbkdf1(algorithm: PySide2.QtCore.QCryptographicHash.Algorithm, password: PySide2.QtCore.QByteArray, salt: PySide2.QtCore.QByteArray, iterations: int, dkLen: int) -> PySide2.QtCore.QByteArray: ...
     @staticmethod
     def deriveKeyPbkdf2(algorithm: PySide2.QtCore.QCryptographicHash.Algorithm, password: PySide2.QtCore.QByteArray, salt: PySide2.QtCore.QByteArray, iterations: int, dkLen: int) -> PySide2.QtCore.QByteArray: ...
 
 
-class QSsl(Shiboken.Object):
+class QSsl(object):
     UnknownProtocol          : QSsl = ... # -0x1
     EmailEntry               : QSsl = ... # 0x0
     Opaque                   : QSsl = ... # 0x0
@@ -1857,7 +1857,7 @@ class QSsl(Shiboken.Object):
         TlsV1_3OrLater           : QSsl.SslProtocol = ... # 0x10
 
 
-class QSslCertificate(Shiboken.Object):
+class QSslCertificate(object):
     Organization             : QSslCertificate = ... # 0x0
     CommonName               : QSslCertificate = ... # 0x1
     LocalityName             : QSslCertificate = ... # 0x2
@@ -1938,7 +1938,7 @@ class QSslCertificate(Shiboken.Object):
     def version(self) -> PySide2.QtCore.QByteArray: ...
 
 
-class QSslCertificateExtension(Shiboken.Object):
+class QSslCertificateExtension(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -1955,7 +1955,7 @@ class QSslCertificateExtension(Shiboken.Object):
     def value(self) -> typing.Any: ...
 
 
-class QSslCipher(Shiboken.Object):
+class QSslCipher(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -1980,7 +1980,7 @@ class QSslCipher(Shiboken.Object):
     def usedBits(self) -> int: ...
 
 
-class QSslConfiguration(Shiboken.Object):
+class QSslConfiguration(object):
     NextProtocolNegotiationNone: QSslConfiguration = ... # 0x0
     NextProtocolNegotiationNegotiated: QSslConfiguration = ... # 0x1
     NextProtocolNegotiationUnsupported: QSslConfiguration = ... # 0x2
@@ -2059,7 +2059,7 @@ class QSslConfiguration(Shiboken.Object):
     def testSslOption(self, option: PySide2.QtNetwork.QSsl.SslOption) -> bool: ...
 
 
-class QSslDiffieHellmanParameters(Shiboken.Object):
+class QSslDiffieHellmanParameters(object):
     NoError                  : QSslDiffieHellmanParameters = ... # 0x0
     InvalidInputDataError    : QSslDiffieHellmanParameters = ... # 0x1
     UnsafeParametersError    : QSslDiffieHellmanParameters = ... # 0x2
@@ -2091,7 +2091,7 @@ class QSslDiffieHellmanParameters(Shiboken.Object):
     def swap(self, other: PySide2.QtNetwork.QSslDiffieHellmanParameters) -> None: ...
 
 
-class QSslError(Shiboken.Object):
+class QSslError(object):
     UnspecifiedError         : QSslError = ... # -0x1
     NoError                  : QSslError = ... # 0x0
     UnableToGetIssuerCertificate: QSslError = ... # 0x1
@@ -2188,7 +2188,7 @@ class QSslError(Shiboken.Object):
     def swap(self, other: PySide2.QtNetwork.QSslError) -> None: ...
 
 
-class QSslKey(Shiboken.Object):
+class QSslKey(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -2214,7 +2214,7 @@ class QSslKey(Shiboken.Object):
     def type(self) -> PySide2.QtNetwork.QSsl.KeyType: ...
 
 
-class QSslPreSharedKeyAuthenticator(Shiboken.Object):
+class QSslPreSharedKeyAuthenticator(object):
 
     @typing.overload
     def __init__(self) -> None: ...

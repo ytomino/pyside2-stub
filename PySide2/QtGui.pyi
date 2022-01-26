@@ -62,7 +62,7 @@ Shiboken.Object = Object
 import PySide2.QtGui
 
 
-class QAbstractOpenGLFunctions(Shiboken.Object):
+class QAbstractOpenGLFunctions(object):
 
     def __init__(self) -> None: ...
 
@@ -74,7 +74,7 @@ class QAbstractOpenGLFunctions(Shiboken.Object):
 
 class QAbstractTextDocumentLayout(PySide2.QtCore.QObject):
 
-    class PaintContext(Shiboken.Object):
+    class PaintContext(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -84,7 +84,7 @@ class QAbstractTextDocumentLayout(PySide2.QtCore.QObject):
         @staticmethod
         def __copy__() -> None: ...
 
-    class Selection(Shiboken.Object):
+    class Selection(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -120,7 +120,7 @@ class QAbstractTextDocumentLayout(PySide2.QtCore.QObject):
     def unregisterHandler(self, objectType: int, component: typing.Optional[PySide2.QtCore.QObject] = ...) -> None: ...
 
 
-class QAccessible(Shiboken.Object):
+class QAccessible(object):
     CharBoundary             : QAccessible = ... # 0x0
     Name                     : QAccessible = ... # 0x0
     NoRole                   : QAccessible = ... # 0x0
@@ -461,7 +461,7 @@ class QAccessible(Shiboken.Object):
         ComplementaryContent     : QAccessible.Role = ... # 0x42c
         UserRole                 : QAccessible.Role = ... # 0xffff
 
-    class State(Shiboken.Object):
+    class State(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -513,7 +513,7 @@ class QAccessible(Shiboken.Object):
     def updateAccessibility(event: PySide2.QtGui.QAccessibleEvent) -> None: ...
 
 
-class QAccessibleEditableTextInterface(Shiboken.Object):
+class QAccessibleEditableTextInterface(object):
 
     def __init__(self) -> None: ...
 
@@ -522,7 +522,7 @@ class QAccessibleEditableTextInterface(Shiboken.Object):
     def replaceText(self, startOffset: int, endOffset: int, text: str) -> None: ...
 
 
-class QAccessibleEvent(Shiboken.Object):
+class QAccessibleEvent(object):
 
     @typing.overload
     def __init__(self, iface: PySide2.QtGui.QAccessibleInterface, typ: PySide2.QtGui.QAccessible.Event) -> None: ...
@@ -537,7 +537,7 @@ class QAccessibleEvent(Shiboken.Object):
     def uniqueId(self) -> int: ...
 
 
-class QAccessibleInterface(Shiboken.Object):
+class QAccessibleInterface(object):
 
     def __init__(self) -> None: ...
 
@@ -587,7 +587,7 @@ class QAccessibleStateChangeEvent(PySide2.QtGui.QAccessibleEvent):
     def changedStates(self) -> PySide2.QtGui.QAccessible.State: ...
 
 
-class QAccessibleTableCellInterface(Shiboken.Object):
+class QAccessibleTableCellInterface(object):
 
     def __init__(self) -> None: ...
 
@@ -656,7 +656,7 @@ class QAccessibleTextInsertEvent(PySide2.QtGui.QAccessibleTextCursorEvent):
     def textInserted(self) -> str: ...
 
 
-class QAccessibleTextInterface(Shiboken.Object):
+class QAccessibleTextInterface(object):
 
     def __init__(self) -> None: ...
 
@@ -724,7 +724,7 @@ class QAccessibleValueChangeEvent(PySide2.QtGui.QAccessibleEvent):
     def value(self) -> typing.Any: ...
 
 
-class QAccessibleValueInterface(Shiboken.Object):
+class QAccessibleValueInterface(object):
 
     def __init__(self) -> None: ...
 
@@ -738,7 +738,7 @@ class QAccessibleValueInterface(Shiboken.Object):
 class QActionEvent(PySide2.QtCore.QEvent): ...
 
 
-class QBackingStore(Shiboken.Object):
+class QBackingStore(object):
 
     def __init__(self, window: PySide2.QtGui.QWindow) -> None: ...
 
@@ -793,7 +793,7 @@ class QBitmap(PySide2.QtGui.QPixmap):
     def transformed(self, matrix: PySide2.QtGui.QTransform) -> PySide2.QtGui.QBitmap: ...
 
 
-class QBrush(Shiboken.Object):
+class QBrush(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -875,7 +875,7 @@ class QCloseEvent(PySide2.QtCore.QEvent):
     def __init__(self) -> None: ...
 
 
-class QColor(Shiboken.Object):
+class QColor(object):
     HexRgb                   : QColor = ... # 0x0
     Invalid                  : QColor = ... # 0x0
     HexArgb                  : QColor = ... # 0x1
@@ -1038,12 +1038,12 @@ class QColor(Shiboken.Object):
     def yellowF(self) -> float: ...
 
 
-class QColorConstants(Shiboken.Object):
+class QColorConstants(object):
 
-    class Svg(Shiboken.Object): ...
+    class Svg(object): ...
 
 
-class QColorSpace(Shiboken.Object):
+class QColorSpace(object):
     SRgb                     : QColorSpace = ... # 0x1
     SRgbLinear               : QColorSpace = ... # 0x2
     AdobeRgb                 : QColorSpace = ... # 0x3
@@ -1152,7 +1152,7 @@ class QContextMenuEvent(PySide2.QtGui.QInputEvent):
     def y(self) -> int: ...
 
 
-class QCursor(Shiboken.Object):
+class QCursor(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -1196,7 +1196,7 @@ class QCursor(Shiboken.Object):
     def swap(self, other: PySide2.QtGui.QCursor) -> None: ...
 
 
-class QDesktopServices(Shiboken.Object):
+class QDesktopServices(object):
 
     def __init__(self) -> None: ...
 
@@ -1343,7 +1343,7 @@ class QFocusEvent(PySide2.QtCore.QEvent):
     def reason(self) -> PySide2.QtCore.Qt.FocusReason: ...
 
 
-class QFont(Shiboken.Object):
+class QFont(object):
     AnyStretch               : QFont = ... # 0x0
     Helvetica                : QFont = ... # 0x0
     MixedCase                : QFont = ... # 0x0
@@ -1578,7 +1578,7 @@ class QFont(Shiboken.Object):
     def wordSpacing(self) -> float: ...
 
 
-class QFontDatabase(Shiboken.Object):
+class QFontDatabase(object):
     Any                      : QFontDatabase = ... # 0x0
     GeneralFont              : QFontDatabase = ... # 0x0
     FixedFont                : QFontDatabase = ... # 0x1
@@ -1715,7 +1715,7 @@ class QFontDatabase(Shiboken.Object):
     def writingSystems(self, family: str) -> typing.List[PySide2.QtGui.QFontDatabase.WritingSystem]: ...
 
 
-class QFontInfo(Shiboken.Object):
+class QFontInfo(object):
 
     @typing.overload
     def __init__(self, arg__1: PySide2.QtGui.QFont) -> None: ...
@@ -1743,7 +1743,7 @@ class QFontInfo(Shiboken.Object):
     def weight(self) -> int: ...
 
 
-class QFontMetrics(Shiboken.Object):
+class QFontMetrics(object):
 
     @typing.overload
     def __init__(self, arg__1: PySide2.QtGui.QFont) -> None: ...
@@ -1797,7 +1797,7 @@ class QFontMetrics(Shiboken.Object):
     def xHeight(self) -> int: ...
 
 
-class QFontMetricsF(Shiboken.Object):
+class QFontMetricsF(object):
 
     @typing.overload
     def __init__(self, arg__1: PySide2.QtGui.QFontMetrics) -> None: ...
@@ -1847,7 +1847,7 @@ class QFontMetricsF(Shiboken.Object):
     def xHeight(self) -> float: ...
 
 
-class QGradient(Shiboken.Object):
+class QGradient(object):
     ColorInterpolation       : QGradient = ... # 0x0
     LinearGradient           : QGradient = ... # 0x0
     LogicalMode              : QGradient = ... # 0x0
@@ -2377,7 +2377,7 @@ class QHoverEvent(PySide2.QtGui.QInputEvent):
     def posF(self) -> PySide2.QtCore.QPointF: ...
 
 
-class QIcon(Shiboken.Object):
+class QIcon(object):
     Normal                   : QIcon = ... # 0x0
     On                       : QIcon = ... # 0x0
     Disabled                 : QIcon = ... # 0x1
@@ -2466,13 +2466,13 @@ class QIconDragEvent(PySide2.QtCore.QEvent):
     def __init__(self) -> None: ...
 
 
-class QIconEngine(Shiboken.Object):
+class QIconEngine(object):
     AvailableSizesHook       : QIconEngine = ... # 0x1
     IconNameHook             : QIconEngine = ... # 0x2
     IsNullHook               : QIconEngine = ... # 0x3
     ScaledPixmapHook         : QIconEngine = ... # 0x4
 
-    class AvailableSizesArgument(Shiboken.Object):
+    class AvailableSizesArgument(object):
 
         def __init__(self) -> None: ...
 
@@ -2733,7 +2733,7 @@ class QImage(PySide2.QtGui.QPaintDevice):
     def width(self) -> int: ...
 
 
-class QImageIOHandler(Shiboken.Object):
+class QImageIOHandler(object):
     Size                     : QImageIOHandler = ... # 0x0
     TransformationNone       : QImageIOHandler = ... # 0x0
     ClipRect                 : QImageIOHandler = ... # 0x1
@@ -2819,7 +2819,7 @@ class QImageIOHandler(Shiboken.Object):
     def write(self, image: PySide2.QtGui.QImage) -> bool: ...
 
 
-class QImageReader(Shiboken.Object):
+class QImageReader(object):
     UnknownError             : QImageReader = ... # 0x0
     FileNotFoundError        : QImageReader = ... # 0x1
     DeviceError              : QImageReader = ... # 0x2
@@ -2899,7 +2899,7 @@ class QImageReader(Shiboken.Object):
     def transformation(self) -> PySide2.QtGui.QImageIOHandler.Transformations: ...
 
 
-class QImageWriter(Shiboken.Object):
+class QImageWriter(object):
     UnknownError             : QImageWriter = ... # 0x0
     DeviceError              : QImageWriter = ... # 0x1
     UnsupportedFormatError   : QImageWriter = ... # 0x2
@@ -3002,7 +3002,7 @@ class QInputMethodEvent(PySide2.QtCore.QEvent):
     Ruby                     : QInputMethodEvent = ... # 0x3
     Selection                : QInputMethodEvent = ... # 0x4
 
-    class Attribute(Shiboken.Object):
+    class Attribute(object):
 
         @typing.overload
         def __init__(self, Attribute: PySide2.QtGui.QInputMethodEvent.Attribute) -> None: ...
@@ -3079,7 +3079,7 @@ class QKeyEvent(PySide2.QtGui.QInputEvent):
     def text(self) -> str: ...
 
 
-class QKeySequence(Shiboken.Object):
+class QKeySequence(object):
     NativeText               : QKeySequence = ... # 0x0
     NoMatch                  : QKeySequence = ... # 0x0
     UnknownKey               : QKeySequence = ... # 0x0
@@ -3298,7 +3298,7 @@ class QLinearGradient(PySide2.QtGui.QGradient):
     def start(self) -> PySide2.QtCore.QPointF: ...
 
 
-class QMatrix(Shiboken.Object):
+class QMatrix(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -3367,7 +3367,7 @@ class QMatrix(Shiboken.Object):
     def translate(self, dx: float, dy: float) -> PySide2.QtGui.QMatrix: ...
 
 
-class QMatrix2x2(Shiboken.Object):
+class QMatrix2x2(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -3391,7 +3391,7 @@ class QMatrix2x2(Shiboken.Object):
     def transposed(self) -> PySide2.QtGui.QMatrix2x2: ...
 
 
-class QMatrix2x3(Shiboken.Object):
+class QMatrix2x3(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -3415,7 +3415,7 @@ class QMatrix2x3(Shiboken.Object):
     def transposed(self) -> PySide2.QtGui.QMatrix3x2: ...
 
 
-class QMatrix2x4(Shiboken.Object):
+class QMatrix2x4(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -3439,7 +3439,7 @@ class QMatrix2x4(Shiboken.Object):
     def transposed(self) -> PySide2.QtGui.QMatrix4x2: ...
 
 
-class QMatrix3x2(Shiboken.Object):
+class QMatrix3x2(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -3463,7 +3463,7 @@ class QMatrix3x2(Shiboken.Object):
     def transposed(self) -> PySide2.QtGui.QMatrix2x3: ...
 
 
-class QMatrix3x3(Shiboken.Object):
+class QMatrix3x3(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -3487,7 +3487,7 @@ class QMatrix3x3(Shiboken.Object):
     def transposed(self) -> PySide2.QtGui.QMatrix3x3: ...
 
 
-class QMatrix3x4(Shiboken.Object):
+class QMatrix3x4(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -3511,7 +3511,7 @@ class QMatrix3x4(Shiboken.Object):
     def transposed(self) -> PySide2.QtGui.QMatrix4x3: ...
 
 
-class QMatrix4x2(Shiboken.Object):
+class QMatrix4x2(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -3535,7 +3535,7 @@ class QMatrix4x2(Shiboken.Object):
     def transposed(self) -> PySide2.QtGui.QMatrix2x4: ...
 
 
-class QMatrix4x3(Shiboken.Object):
+class QMatrix4x3(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -3559,7 +3559,7 @@ class QMatrix4x3(Shiboken.Object):
     def transposed(self) -> PySide2.QtGui.QMatrix3x4: ...
 
 
-class QMatrix4x4(Shiboken.Object):
+class QMatrix4x4(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -3796,7 +3796,7 @@ class QOffscreenSurface(PySide2.QtCore.QObject, PySide2.QtGui.QSurface):
     def surfaceType(self) -> PySide2.QtGui.QSurface.SurfaceType: ...
 
 
-class QOpenGLBuffer(Shiboken.Object):
+class QOpenGLBuffer(object):
     RangeRead                : QOpenGLBuffer = ... # 0x1
     RangeWrite               : QOpenGLBuffer = ... # 0x2
     RangeInvalidate          : QOpenGLBuffer = ... # 0x4
@@ -3966,7 +3966,7 @@ class QOpenGLDebugLogger(PySide2.QtCore.QObject):
     def stopLogging(self) -> None: ...
 
 
-class QOpenGLDebugMessage(Shiboken.Object):
+class QOpenGLDebugMessage(object):
     InvalidSeverity          : QOpenGLDebugMessage = ... # 0x0
     InvalidSource            : QOpenGLDebugMessage = ... # 0x0
     InvalidType              : QOpenGLDebugMessage = ... # 0x0
@@ -4247,7 +4247,7 @@ class QOpenGLExtraFunctions(PySide2.QtGui.QOpenGLFunctions):
     def glVertexBindingDivisor(self, bindingindex: int, divisor: int) -> None: ...
 
 
-class QOpenGLFramebufferObject(Shiboken.Object):
+class QOpenGLFramebufferObject(object):
     DontRestoreFramebufferBinding: QOpenGLFramebufferObject = ... # 0x0
     NoAttachment             : QOpenGLFramebufferObject = ... # 0x0
     CombinedDepthStencil     : QOpenGLFramebufferObject = ... # 0x1
@@ -4326,7 +4326,7 @@ class QOpenGLFramebufferObject(Shiboken.Object):
     def width(self) -> int: ...
 
 
-class QOpenGLFramebufferObjectFormat(Shiboken.Object):
+class QOpenGLFramebufferObjectFormat(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -4347,7 +4347,7 @@ class QOpenGLFramebufferObjectFormat(Shiboken.Object):
     def textureTarget(self) -> int: ...
 
 
-class QOpenGLFunctions(Shiboken.Object):
+class QOpenGLFunctions(object):
     Multitexture             : QOpenGLFunctions = ... # 0x1
     Shaders                  : QOpenGLFunctions = ... # 0x2
     Buffers                  : QOpenGLFunctions = ... # 0x4
@@ -4531,7 +4531,7 @@ class QOpenGLFunctions(Shiboken.Object):
     def openGLFeatures(self) -> PySide2.QtGui.QOpenGLFunctions.OpenGLFeatures: ...
 
 
-class QOpenGLPixelTransferOptions(Shiboken.Object):
+class QOpenGLPixelTransferOptions(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -4831,7 +4831,7 @@ class QOpenGLShaderProgram(PySide2.QtCore.QObject):
     def uniformLocation(self, name: bytes) -> int: ...
 
 
-class QOpenGLTexture(Shiboken.Object):
+class QOpenGLTexture(object):
     CompareNone              : QOpenGLTexture = ... # 0x0
     GenerateMipMaps          : QOpenGLTexture = ... # 0x0
     NoFormat                 : QOpenGLTexture = ... # 0x0
@@ -5555,7 +5555,7 @@ class QOpenGLTexture(Shiboken.Object):
     def wrapMode(self, direction: PySide2.QtGui.QOpenGLTexture.CoordinateDirection) -> PySide2.QtGui.QOpenGLTexture.WrapMode: ...
 
 
-class QOpenGLTextureBlitter(Shiboken.Object):
+class QOpenGLTextureBlitter(object):
     OriginBottomLeft         : QOpenGLTextureBlitter = ... # 0x0
     OriginTopLeft            : QOpenGLTextureBlitter = ... # 0x1
 
@@ -5612,7 +5612,7 @@ class QOpenGLTimerQuery(PySide2.QtCore.QObject):
     def recordTimestamp(self) -> None: ...
 
 
-class QOpenGLVersionProfile(Shiboken.Object):
+class QOpenGLVersionProfile(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -5634,7 +5634,7 @@ class QOpenGLVersionProfile(Shiboken.Object):
 
 class QOpenGLVertexArrayObject(PySide2.QtCore.QObject):
 
-    class Binder(Shiboken.Object):
+    class Binder(object):
 
         def __init__(self, v: PySide2.QtGui.QOpenGLVertexArrayObject) -> None: ...
 
@@ -5685,7 +5685,7 @@ class QOpenGLWindow(PySide2.QtGui.QPaintDeviceWindow):
     def updateBehavior(self) -> PySide2.QtGui.QOpenGLWindow.UpdateBehavior: ...
 
 
-class QPageLayout(Shiboken.Object):
+class QPageLayout(object):
     Millimeter               : QPageLayout = ... # 0x0
     Portrait                 : QPageLayout = ... # 0x0
     StandardMode             : QPageLayout = ... # 0x0
@@ -5761,7 +5761,7 @@ class QPageLayout(Shiboken.Object):
     def units(self) -> PySide2.QtGui.QPageLayout.Unit: ...
 
 
-class QPageSize(Shiboken.Object):
+class QPageSize(object):
     A4                       : QPageSize = ... # 0x0
     FuzzyMatch               : QPageSize = ... # 0x0
     Millimeter               : QPageSize = ... # 0x0
@@ -6245,7 +6245,7 @@ class QPagedPaintDevice(PySide2.QtGui.QPaintDevice):
     NPageSize                : QPagedPaintDevice = ... # 0x76
     NPaperSize               : QPagedPaintDevice = ... # 0x76
 
-    class Margins(Shiboken.Object):
+    class Margins(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -6411,7 +6411,7 @@ class QPagedPaintDevice(PySide2.QtGui.QPaintDevice):
     def setPageSizeMM(self, size: PySide2.QtCore.QSizeF) -> None: ...
 
 
-class QPaintDevice(Shiboken.Object):
+class QPaintDevice(object):
     PdmWidth                 : QPaintDevice = ... # 0x1
     PdmHeight                : QPaintDevice = ... # 0x2
     PdmWidthMM               : QPaintDevice = ... # 0x3
@@ -6478,7 +6478,7 @@ class QPaintDeviceWindow(PySide2.QtGui.QWindow, PySide2.QtGui.QPaintDevice):
     def update(self, region: PySide2.QtGui.QRegion) -> None: ...
 
 
-class QPaintEngine(Shiboken.Object):
+class QPaintEngine(object):
     OddEvenMode              : QPaintEngine = ... # 0x0
     X11                      : QPaintEngine = ... # 0x0
     DirtyPen                 : QPaintEngine = ... # 0x1
@@ -6656,7 +6656,7 @@ class QPaintEngine(Shiboken.Object):
     def updateState(self, state: PySide2.QtGui.QPaintEngineState) -> None: ...
 
 
-class QPaintEngineState(Shiboken.Object):
+class QPaintEngineState(object):
 
     def __init__(self) -> None: ...
 
@@ -6692,7 +6692,7 @@ class QPaintEvent(PySide2.QtCore.QEvent):
     def region(self) -> PySide2.QtGui.QRegion: ...
 
 
-class QPainter(Shiboken.Object):
+class QPainter(object):
     CompositionMode_SourceOver: QPainter = ... # 0x0
     Antialiasing             : QPainter = ... # 0x1
     CompositionMode_DestinationOver: QPainter = ... # 0x1
@@ -6780,7 +6780,7 @@ class QPainter(Shiboken.Object):
         RasterOp_SetDestination  : QPainter.CompositionMode = ... # 0x24
         RasterOp_NotDestination  : QPainter.CompositionMode = ... # 0x25
 
-    class PixmapFragment(Shiboken.Object):
+    class PixmapFragment(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -7152,13 +7152,13 @@ class QPainter(Shiboken.Object):
     def worldTransform(self) -> PySide2.QtGui.QTransform: ...
 
 
-class QPainterPath(Shiboken.Object):
+class QPainterPath(object):
     MoveToElement            : QPainterPath = ... # 0x0
     LineToElement            : QPainterPath = ... # 0x1
     CurveToElement           : QPainterPath = ... # 0x2
     CurveToDataElement       : QPainterPath = ... # 0x3
 
-    class Element(Shiboken.Object):
+    class Element(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -7311,7 +7311,7 @@ class QPainterPath(Shiboken.Object):
     def united(self, r: PySide2.QtGui.QPainterPath) -> PySide2.QtGui.QPainterPath: ...
 
 
-class QPainterPathStroker(Shiboken.Object):
+class QPainterPathStroker(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -7338,7 +7338,7 @@ class QPainterPathStroker(Shiboken.Object):
     def width(self) -> float: ...
 
 
-class QPalette(Shiboken.Object):
+class QPalette(object):
     Active                   : QPalette = ... # 0x0
     Foreground               : QPalette = ... # 0x0
     Normal                   : QPalette = ... # 0x0
@@ -7505,7 +7505,7 @@ class QPdfWriter(PySide2.QtCore.QObject, PySide2.QtGui.QPagedPaintDevice):
     def title(self) -> str: ...
 
 
-class QPen(Shiboken.Object):
+class QPen(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -7590,7 +7590,7 @@ class QPicture(PySide2.QtGui.QPaintDevice):
     def swap(self, other: PySide2.QtGui.QPicture) -> None: ...
 
 
-class QPictureIO(Shiboken.Object):
+class QPictureIO(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -7631,7 +7631,7 @@ class QPictureIO(Shiboken.Object):
     def write(self) -> bool: ...
 
 
-class QPixelFormat(Shiboken.Object):
+class QPixelFormat(object):
     AtBeginning              : QPixelFormat = ... # 0x0
     LittleEndian             : QPixelFormat = ... # 0x0
     NotPremultiplied         : QPixelFormat = ... # 0x0
@@ -7856,9 +7856,9 @@ class QPixmap(PySide2.QtGui.QPaintDevice):
     def width(self) -> int: ...
 
 
-class QPixmapCache(Shiboken.Object):
+class QPixmapCache(object):
 
-    class Key(Shiboken.Object):
+    class Key(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -7905,7 +7905,7 @@ class QPixmapCache(Shiboken.Object):
     def setCacheLimit(arg__1: int) -> None: ...
 
 
-class QPointingDeviceUniqueId(Shiboken.Object):
+class QPointingDeviceUniqueId(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -7920,7 +7920,7 @@ class QPointingDeviceUniqueId(Shiboken.Object):
     def numericId(self) -> int: ...
 
 
-class QPolygon(Shiboken.Object):
+class QPolygon(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -8033,7 +8033,7 @@ class QPolygon(Shiboken.Object):
     def value(self, i: int, defaultValue: PySide2.QtCore.QPoint) -> PySide2.QtCore.QPoint: ...
 
 
-class QPolygonF(Shiboken.Object):
+class QPolygonF(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -8152,7 +8152,7 @@ class QPyTextObject(PySide2.QtCore.QObject, PySide2.QtGui.QTextObjectInterface):
     def intrinsicSize(self, doc: PySide2.QtGui.QTextDocument, posInDocument: int, format: PySide2.QtGui.QTextFormat) -> PySide2.QtCore.QSizeF: ...
 
 
-class QQuaternion(Shiboken.Object):
+class QQuaternion(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -8284,7 +8284,7 @@ class QRasterWindow(PySide2.QtGui.QPaintDeviceWindow):
     def redirected(self, arg__1: PySide2.QtCore.QPoint) -> PySide2.QtGui.QPaintDevice: ...
 
 
-class QRawFont(Shiboken.Object):
+class QRawFont(object):
     PixelAntialiasing        : QRawFont = ... # 0x0
     SeparateAdvances         : QRawFont = ... # 0x0
     KernedAdvances           : QRawFont = ... # 0x1
@@ -8364,7 +8364,7 @@ class QRegExpValidator(PySide2.QtGui.QValidator):
     def validate(self, input: str, pos: int) -> PySide2.QtGui.QValidator.State: ...
 
 
-class QRegion(Shiboken.Object):
+class QRegion(object):
     Rectangle                : QRegion = ... # 0x0
     Ellipse                  : QRegion = ... # 0x1
 
@@ -8583,7 +8583,7 @@ class QShowEvent(PySide2.QtCore.QEvent):
     def __init__(self) -> None: ...
 
 
-class QStandardItem(Shiboken.Object):
+class QStandardItem(object):
     Type                     : QStandardItem = ... # 0x0
     UserType                 : QStandardItem = ... # 0x3e8
 
@@ -8777,7 +8777,7 @@ class QStandardItemModel(PySide2.QtCore.QAbstractItemModel):
     def verticalHeaderItem(self, row: int) -> PySide2.QtGui.QStandardItem: ...
 
 
-class QStaticText(Shiboken.Object):
+class QStaticText(object):
     ModerateCaching          : QStaticText = ... # 0x0
     AggressiveCaching        : QStaticText = ... # 0x1
 
@@ -8853,7 +8853,7 @@ class QStyleHints(PySide2.QtCore.QObject):
     def wheelScrollLines(self) -> int: ...
 
 
-class QSurface(Shiboken.Object):
+class QSurface(object):
     RasterSurface            : QSurface = ... # 0x0
     Window                   : QSurface = ... # 0x0
     Offscreen                : QSurface = ... # 0x1
@@ -8885,7 +8885,7 @@ class QSurface(Shiboken.Object):
     def surfaceType(self) -> PySide2.QtGui.QSurface.SurfaceType: ...
 
 
-class QSurfaceFormat(Shiboken.Object):
+class QSurfaceFormat(object):
     DefaultColorSpace        : QSurfaceFormat = ... # 0x0
     DefaultRenderableType    : QSurfaceFormat = ... # 0x0
     DefaultSwapBehavior      : QSurfaceFormat = ... # 0x0
@@ -9075,9 +9075,9 @@ class QTabletEvent(PySide2.QtGui.QInputEvent):
     def z(self) -> int: ...
 
 
-class QTextBlock(Shiboken.Object):
+class QTextBlock(object):
 
-    class iterator(Shiboken.Object):
+    class iterator(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -9206,7 +9206,7 @@ class QTextBlockGroup(PySide2.QtGui.QTextObject):
     def blockRemoved(self, block: PySide2.QtGui.QTextBlock) -> None: ...
 
 
-class QTextBlockUserData(Shiboken.Object):
+class QTextBlockUserData(object):
 
     def __init__(self) -> None: ...
 
@@ -9330,7 +9330,7 @@ class QTextCharFormat(PySide2.QtGui.QTextFormat):
     def verticalAlignment(self) -> PySide2.QtGui.QTextCharFormat.VerticalAlignment: ...
 
 
-class QTextCursor(Shiboken.Object):
+class QTextCursor(object):
     MoveAnchor               : QTextCursor = ... # 0x0
     NoMove                   : QTextCursor = ... # 0x0
     WordUnderCursor          : QTextCursor = ... # 0x0
@@ -9647,7 +9647,7 @@ class QTextDocument(PySide2.QtCore.QObject):
     def useDesignMetrics(self) -> bool: ...
 
 
-class QTextDocumentFragment(Shiboken.Object):
+class QTextDocumentFragment(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -9673,7 +9673,7 @@ class QTextDocumentFragment(Shiboken.Object):
     def toPlainText(self) -> str: ...
 
 
-class QTextDocumentWriter(Shiboken.Object):
+class QTextDocumentWriter(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -9698,7 +9698,7 @@ class QTextDocumentWriter(Shiboken.Object):
     def write(self, fragment: PySide2.QtGui.QTextDocumentFragment) -> bool: ...
 
 
-class QTextFormat(Shiboken.Object):
+class QTextFormat(object):
     InvalidFormat            : QTextFormat = ... # -0x1
     NoObject                 : QTextFormat = ... # 0x0
     ObjectIndex              : QTextFormat = ... # 0x0
@@ -10012,7 +10012,7 @@ class QTextFormat(Shiboken.Object):
     def type(self) -> int: ...
 
 
-class QTextFragment(Shiboken.Object):
+class QTextFragment(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -10032,7 +10032,7 @@ class QTextFragment(Shiboken.Object):
 
 class QTextFrame(PySide2.QtGui.QTextObject):
 
-    class iterator(Shiboken.Object):
+    class iterator(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -10165,7 +10165,7 @@ class QTextImageFormat(PySide2.QtGui.QTextCharFormat):
     def width(self) -> float: ...
 
 
-class QTextInlineObject(Shiboken.Object):
+class QTextInlineObject(object):
 
     def __init__(self) -> None: ...
 
@@ -10186,7 +10186,7 @@ class QTextInlineObject(Shiboken.Object):
     def width(self) -> float: ...
 
 
-class QTextItem(Shiboken.Object):
+class QTextItem(object):
     RightToLeft              : QTextItem = ... # 0x1
     Overline                 : QTextItem = ... # 0x10
     Underline                : QTextItem = ... # 0x20
@@ -10212,7 +10212,7 @@ class QTextItem(Shiboken.Object):
     def width(self) -> float: ...
 
 
-class QTextLayout(Shiboken.Object):
+class QTextLayout(object):
     SkipCharacters           : QTextLayout = ... # 0x0
     SkipWords                : QTextLayout = ... # 0x1
 
@@ -10220,7 +10220,7 @@ class QTextLayout(Shiboken.Object):
         SkipCharacters           : QTextLayout.CursorMode = ... # 0x0
         SkipWords                : QTextLayout.CursorMode = ... # 0x1
 
-    class FormatRange(Shiboken.Object):
+    class FormatRange(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -10284,7 +10284,7 @@ class QTextLayout(Shiboken.Object):
     def textOption(self) -> PySide2.QtGui.QTextOption: ...
 
 
-class QTextLength(Shiboken.Object):
+class QTextLength(object):
     VariableLength           : QTextLength = ... # 0x0
     FixedLength              : QTextLength = ... # 0x1
     PercentageLength         : QTextLength = ... # 0x2
@@ -10310,7 +10310,7 @@ class QTextLength(Shiboken.Object):
     def value(self, maximumLength: float) -> float: ...
 
 
-class QTextLine(Shiboken.Object):
+class QTextLine(object):
     CursorBetweenCharacters  : QTextLine = ... # 0x0
     Leading                  : QTextLine = ... # 0x0
     CursorOnCharacter        : QTextLine = ... # 0x1
@@ -10428,7 +10428,7 @@ class QTextObject(PySide2.QtCore.QObject):
     def setFormat(self, format: PySide2.QtGui.QTextFormat) -> None: ...
 
 
-class QTextObjectInterface(Shiboken.Object):
+class QTextObjectInterface(object):
 
     def __init__(self) -> None: ...
 
@@ -10436,7 +10436,7 @@ class QTextObjectInterface(Shiboken.Object):
     def intrinsicSize(self, doc: PySide2.QtGui.QTextDocument, posInDocument: int, format: PySide2.QtGui.QTextFormat) -> PySide2.QtCore.QSizeF: ...
 
 
-class QTextOption(Shiboken.Object):
+class QTextOption(object):
     LeftTab                  : QTextOption = ... # 0x0
     NoWrap                   : QTextOption = ... # 0x0
     RightTab                 : QTextOption = ... # 0x1
@@ -10463,7 +10463,7 @@ class QTextOption(Shiboken.Object):
 
     class Flags(object): ...
 
-    class Tab(Shiboken.Object):
+    class Tab(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -10550,7 +10550,7 @@ class QTextTable(PySide2.QtGui.QTextFrame):
     def splitCell(self, row: int, col: int, numRows: int, numCols: int) -> None: ...
 
 
-class QTextTableCell(Shiboken.Object):
+class QTextTableCell(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -10661,7 +10661,7 @@ class QToolBarChangeEvent(PySide2.QtCore.QEvent):
     def toggle(self) -> bool: ...
 
 
-class QTouchDevice(Shiboken.Object):
+class QTouchDevice(object):
     TouchScreen              : QTouchDevice = ... # 0x0
     Position                 : QTouchDevice = ... # 0x1
     TouchPad                 : QTouchDevice = ... # 0x1
@@ -10703,7 +10703,7 @@ class QTouchDevice(Shiboken.Object):
 
 class QTouchEvent(PySide2.QtGui.QInputEvent):
 
-    class TouchPoint(Shiboken.Object):
+    class TouchPoint(object):
         Pen                      : QTouchEvent.TouchPoint = ... # 0x1
         Token                    : QTouchEvent.TouchPoint = ... # 0x2
 
@@ -10784,7 +10784,7 @@ class QTouchEvent(PySide2.QtGui.QInputEvent):
     def window(self) -> PySide2.QtGui.QWindow: ...
 
 
-class QTransform(Shiboken.Object):
+class QTransform(object):
     TxNone                   : QTransform = ... # 0x0
     TxTranslate              : QTransform = ... # 0x1
     TxScale                  : QTransform = ... # 0x2
@@ -10933,7 +10933,7 @@ class QValidator(PySide2.QtCore.QObject):
     def validate(self, arg__1: str, arg__2: int) -> PySide2.QtGui.QValidator.State: ...
 
 
-class QVector2D(Shiboken.Object):
+class QVector2D(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -10987,7 +10987,7 @@ class QVector2D(Shiboken.Object):
     def y(self) -> float: ...
 
 
-class QVector3D(Shiboken.Object):
+class QVector3D(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -11063,7 +11063,7 @@ class QVector3D(Shiboken.Object):
     def z(self) -> float: ...
 
 
-class QVector4D(Shiboken.Object):
+class QVector4D(object):
 
     @typing.overload
     def __init__(self) -> None: ...

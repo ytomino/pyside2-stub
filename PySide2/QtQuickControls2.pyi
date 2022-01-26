@@ -62,7 +62,7 @@ Shiboken.Object = Object
 import PySide2.QtQuickControls2
 
 
-class QQuickStyle(Shiboken.Object):
+class QQuickStyle(object):
 
     def __init__(self) -> None: ...
 

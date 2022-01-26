@@ -71,7 +71,7 @@ class QQuickAsyncImageProvider(PySide2.QtQuick.QQuickImageProvider):
 
 class QQuickFramebufferObject(PySide2.QtQuick.QQuickItem):
 
-    class Renderer(Shiboken.Object):
+    class Renderer(object):
 
         def __init__(self) -> None: ...
 
@@ -176,7 +176,7 @@ class QQuickItem(PySide2.QtCore.QObject, PySide2.QtQml.QQmlParserStatus):
         Bottom                   : QQuickItem.TransformOrigin = ... # 0x7
         BottomRight              : QQuickItem.TransformOrigin = ... # 0x8
 
-    class UpdatePaintNodeData(Shiboken.Object):
+    class UpdatePaintNodeData(object):
         @staticmethod
         def __copy__() -> None: ...
 
@@ -700,7 +700,7 @@ class QSGEngine(PySide2.QtCore.QObject):
     def invalidate(self) -> None: ...
 
 
-class QSGGeometry(Shiboken.Object):
+class QSGGeometry(object):
     AlwaysUploadPattern      : QSGGeometry = ... # 0x0
     DrawPoints               : QSGGeometry = ... # 0x0
     UnknownAttribute         : QSGGeometry = ... # 0x0
@@ -730,7 +730,7 @@ class QSGGeometry(Shiboken.Object):
     Bytes4Type               : QSGGeometry = ... # 0x1409
     DoubleType               : QSGGeometry = ... # 0x140a
 
-    class Attribute(Shiboken.Object):
+    class Attribute(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -744,7 +744,7 @@ class QSGGeometry(Shiboken.Object):
         @staticmethod
         def createWithAttributeType(pos: int, tupleSize: int, primitiveType: int, attributeType: PySide2.QtQuick.QSGGeometry.AttributeType) -> PySide2.QtQuick.QSGGeometry.Attribute: ...
 
-    class AttributeSet(Shiboken.Object):
+    class AttributeSet(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -762,7 +762,7 @@ class QSGGeometry(Shiboken.Object):
         TexCoord1Attribute       : QSGGeometry.AttributeType = ... # 0x4
         TexCoord2Attribute       : QSGGeometry.AttributeType = ... # 0x5
 
-    class ColoredPoint2D(Shiboken.Object):
+    class ColoredPoint2D(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -788,7 +788,7 @@ class QSGGeometry(Shiboken.Object):
         DrawTriangleStrip        : QSGGeometry.DrawingMode = ... # 0x5
         DrawTriangleFan          : QSGGeometry.DrawingMode = ... # 0x6
 
-    class Point2D(Shiboken.Object):
+    class Point2D(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -799,7 +799,7 @@ class QSGGeometry(Shiboken.Object):
         def __copy__() -> None: ...
         def set(self, nx: float, ny: float) -> None: ...
 
-    class TexturedPoint2D(Shiboken.Object):
+    class TexturedPoint2D(object):
 
         @typing.overload
         def __init__(self) -> None: ...
@@ -874,12 +874,12 @@ class QSGGeometryNode(PySide2.QtQuick.QSGBasicGeometryNode):
     def setRenderOrder(self, order: int) -> None: ...
 
 
-class QSGMaterialType(Shiboken.Object):
+class QSGMaterialType(object):
 
     def __init__(self) -> None: ...
 
 
-class QSGNode(Shiboken.Object):
+class QSGNode(object):
     BasicNodeType            : QSGNode = ... # 0x0
     GeometryNodeType         : QSGNode = ... # 0x1
     OwnedByParent            : QSGNode = ... # 0x1

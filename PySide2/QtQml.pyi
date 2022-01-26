@@ -109,7 +109,7 @@ class QJSEngine(PySide2.QtCore.QObject):
     def uiLanguage(self) -> str: ...
 
 
-class QJSValue(Shiboken.Object):
+class QJSValue(object):
     NoError                  : QJSValue = ... # 0x0
     NullValue                : QJSValue = ... # 0x0
     GenericError             : QJSValue = ... # 0x1
@@ -199,7 +199,7 @@ class QJSValue(Shiboken.Object):
     def toVariant(self) -> typing.Any: ...
 
 
-class QJSValueIterator(Shiboken.Object):
+class QJSValueIterator(object):
 
     def __init__(self, value: PySide2.QtQml.QJSValue) -> None: ...
 
@@ -209,7 +209,7 @@ class QJSValueIterator(Shiboken.Object):
     def value(self) -> PySide2.QtQml.QJSValue: ...
 
 
-class QQmlAbstractUrlInterceptor(Shiboken.Object):
+class QQmlAbstractUrlInterceptor(object):
     QmlFile                  : QQmlAbstractUrlInterceptor = ... # 0x0
     JavaScriptFile           : QQmlAbstractUrlInterceptor = ... # 0x1
     QmldirFile               : QQmlAbstractUrlInterceptor = ... # 0x2
@@ -324,7 +324,7 @@ class QQmlContext(PySide2.QtCore.QObject):
     def setContextProperty(self, arg__1: str, arg__2: typing.Any) -> None: ...
 
 
-class QQmlDebuggingEnabler(Shiboken.Object):
+class QQmlDebuggingEnabler(object):
     DoNotWaitForClient       : QQmlDebuggingEnabler = ... # 0x0
     WaitForClient            : QQmlDebuggingEnabler = ... # 0x1
 
@@ -402,7 +402,7 @@ class QQmlEngine(PySide2.QtQml.QJSEngine):
     def urlInterceptor(self) -> PySide2.QtQml.QQmlAbstractUrlInterceptor: ...
 
 
-class QQmlError(Shiboken.Object):
+class QQmlError(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -469,7 +469,7 @@ class QQmlExtensionPlugin(PySide2.QtCore.QObject, PySide2.QtQml.QQmlExtensionInt
     def registerTypes(self, uri: bytes) -> None: ...
 
 
-class QQmlFile(Shiboken.Object):
+class QQmlFile(object):
     Null                     : QQmlFile = ... # 0x0
     Ready                    : QQmlFile = ... # 0x1
     Error                    : QQmlFile = ... # 0x2
@@ -545,7 +545,7 @@ class QQmlFileSelector(PySide2.QtCore.QObject):
     def setSelector(self, selector: PySide2.QtCore.QFileSelector) -> None: ...
 
 
-class QQmlImageProviderBase(Shiboken.Object):
+class QQmlImageProviderBase(object):
     Image                    : QQmlImageProviderBase = ... # 0x0
     ForceAsynchronousImageLoading: QQmlImageProviderBase = ... # 0x1
     Pixmap                   : QQmlImageProviderBase = ... # 0x1
@@ -568,7 +568,7 @@ class QQmlImageProviderBase(Shiboken.Object):
     def imageType(self) -> PySide2.QtQml.QQmlImageProviderBase.ImageType: ...
 
 
-class QQmlIncubationController(Shiboken.Object):
+class QQmlIncubationController(object):
 
     def __init__(self) -> None: ...
 
@@ -579,7 +579,7 @@ class QQmlIncubationController(Shiboken.Object):
     def incubatingObjectCountChanged(self, arg__1: int) -> None: ...
 
 
-class QQmlIncubator(Shiboken.Object):
+class QQmlIncubator(object):
     Asynchronous             : QQmlIncubator = ... # 0x0
     Null                     : QQmlIncubator = ... # 0x0
     AsynchronousIfNested     : QQmlIncubator = ... # 0x1
@@ -616,7 +616,7 @@ class QQmlIncubator(Shiboken.Object):
     def statusChanged(self, arg__1: PySide2.QtQml.QQmlIncubator.Status) -> None: ...
 
 
-class QQmlListReference(Shiboken.Object):
+class QQmlListReference(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -646,14 +646,14 @@ class QQmlListReference(Shiboken.Object):
     def replace(self, arg__1: int, arg__2: PySide2.QtCore.QObject) -> bool: ...
 
 
-class QQmlNetworkAccessManagerFactory(Shiboken.Object):
+class QQmlNetworkAccessManagerFactory(object):
 
     def __init__(self) -> None: ...
 
     def create(self, parent: PySide2.QtCore.QObject) -> PySide2.QtNetwork.QNetworkAccessManager: ...
 
 
-class QQmlParserStatus(Shiboken.Object):
+class QQmlParserStatus(object):
 
     def __init__(self) -> None: ...
 
@@ -661,7 +661,7 @@ class QQmlParserStatus(Shiboken.Object):
     def componentComplete(self) -> None: ...
 
 
-class QQmlProperty(Shiboken.Object):
+class QQmlProperty(object):
     Invalid                  : QQmlProperty = ... # 0x0
     InvalidCategory          : QQmlProperty = ... # 0x0
     List                     : QQmlProperty = ... # 0x1
@@ -761,14 +761,14 @@ class QQmlPropertyMap(PySide2.QtCore.QObject):
     def value(self, key: str) -> typing.Any: ...
 
 
-class QQmlPropertyValueSource(Shiboken.Object):
+class QQmlPropertyValueSource(object):
 
     def __init__(self) -> None: ...
 
     def setTarget(self, arg__1: PySide2.QtQml.QQmlProperty) -> None: ...
 
 
-class QQmlScriptString(Shiboken.Object):
+class QQmlScriptString(object):
 
     @typing.overload
     def __init__(self) -> None: ...
@@ -785,14 +785,14 @@ class QQmlScriptString(Shiboken.Object):
     def stringLiteral(self) -> str: ...
 
 
-class QQmlTypesExtensionInterface(Shiboken.Object):
+class QQmlTypesExtensionInterface(object):
 
     def __init__(self) -> None: ...
 
     def registerTypes(self, uri: bytes) -> None: ...
 
 
-class QtQml(Shiboken.Object):
+class QtQml(object):
     @staticmethod
     def qmlAttachedPropertiesObject(arg__2: PySide2.QtCore.QObject, arg__3: PySide2.QtCore.QMetaObject, create: bool) -> typing.Tuple[PySide2.QtCore.QObject, int]: ...
     @staticmethod
