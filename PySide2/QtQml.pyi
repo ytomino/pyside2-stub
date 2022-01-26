@@ -47,19 +47,9 @@ PySide2.QtQml, except for defaults which are replaced by "...".
 
 # Module PySide2.QtQml
 import PySide2
-try:
-    import typing
-except ImportError:
-    from PySide2.support.signature import typing
-from PySide2.support.signature.mapping import (
-    Virtual, Missing, Invalid, Default, Instance)
-
-class Object(object): pass
-
-import shiboken2 as Shiboken
-Shiboken.Object = Object
-
-import PySide2.QtQml
+import PySide2.QtCore
+import PySide2.QtNetwork
+import typing
 
 
 class ListProperty(PySide2.QtCore.Property):

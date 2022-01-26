@@ -47,19 +47,8 @@ PySide2.QtNetwork, except for defaults which are replaced by "...".
 
 # Module PySide2.QtNetwork
 import PySide2
-try:
-    import typing
-except ImportError:
-    from PySide2.support.signature import typing
-from PySide2.support.signature.mapping import (
-    Virtual, Missing, Invalid, Default, Instance)
-
-class Object(object): pass
-
-import shiboken2 as Shiboken
-Shiboken.Object = Object
-
-import PySide2.QtNetwork
+import PySide2.QtCore
+import typing
 
 
 class QAbstractNetworkCache(PySide2.QtCore.QObject):

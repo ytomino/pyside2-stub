@@ -47,19 +47,10 @@ PySide2.QtQuick, except for defaults which are replaced by "...".
 
 # Module PySide2.QtQuick
 import PySide2
-try:
-    import typing
-except ImportError:
-    from PySide2.support.signature import typing
-from PySide2.support.signature.mapping import (
-    Virtual, Missing, Invalid, Default, Instance)
-
-class Object(object): pass
-
-import shiboken2 as Shiboken
-Shiboken.Object = Object
-
-import PySide2.QtQuick
+import PySide2.QtCore
+import PySide2.QtGui
+import PySide2.QtQml
+import typing
 
 
 class QQuickAsyncImageProvider(PySide2.QtQuick.QQuickImageProvider):
