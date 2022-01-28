@@ -1679,7 +1679,6 @@ class QDialog(PySide2.QtWidgets.QWidget):
 class QDialogButtonBox(PySide2.QtWidgets.QWidget):
     InvalidRole              : QDialogButtonBox = ... # -0x1
     AcceptRole               : QDialogButtonBox = ... # 0x0
-    NoButton                 : QDialogButtonBox = ... # 0x0
     WinLayout                : QDialogButtonBox = ... # 0x0
     MacLayout                : QDialogButtonBox = ... # 0x1
     RejectRole               : QDialogButtonBox = ... # 0x1
@@ -1694,26 +1693,6 @@ class QDialogButtonBox(PySide2.QtWidgets.QWidget):
     ResetRole                : QDialogButtonBox = ... # 0x7
     ApplyRole                : QDialogButtonBox = ... # 0x8
     NRoles                   : QDialogButtonBox = ... # 0x9
-    FirstButton              : QDialogButtonBox = ... # 0x400
-    Ok                       : QDialogButtonBox = ... # 0x400
-    Save                     : QDialogButtonBox = ... # 0x800
-    SaveAll                  : QDialogButtonBox = ... # 0x1000
-    Open                     : QDialogButtonBox = ... # 0x2000
-    Yes                      : QDialogButtonBox = ... # 0x4000
-    YesToAll                 : QDialogButtonBox = ... # 0x8000
-    No                       : QDialogButtonBox = ... # 0x10000
-    NoToAll                  : QDialogButtonBox = ... # 0x20000
-    Abort                    : QDialogButtonBox = ... # 0x40000
-    Retry                    : QDialogButtonBox = ... # 0x80000
-    Ignore                   : QDialogButtonBox = ... # 0x100000
-    Close                    : QDialogButtonBox = ... # 0x200000
-    Cancel                   : QDialogButtonBox = ... # 0x400000
-    Discard                  : QDialogButtonBox = ... # 0x800000
-    Help                     : QDialogButtonBox = ... # 0x1000000
-    Apply                    : QDialogButtonBox = ... # 0x2000000
-    Reset                    : QDialogButtonBox = ... # 0x4000000
-    LastButton               : QDialogButtonBox = ... # 0x8000000
-    RestoreDefaults          : QDialogButtonBox = ... # 0x8000000
 
     class ButtonLayout(object):
         WinLayout                : QDialogButtonBox.ButtonLayout = ... # 0x0
@@ -1736,27 +1715,49 @@ class QDialogButtonBox(PySide2.QtWidgets.QWidget):
         NRoles                   : QDialogButtonBox.ButtonRole = ... # 0x9
 
     class StandardButton(object):
-        NoButton                 : QDialogButtonBox.StandardButton = ... # 0x0
-        FirstButton              : QDialogButtonBox.StandardButton = ... # 0x400
-        Ok                       : QDialogButtonBox.StandardButton = ... # 0x400
-        Save                     : QDialogButtonBox.StandardButton = ... # 0x800
-        SaveAll                  : QDialogButtonBox.StandardButton = ... # 0x1000
-        Open                     : QDialogButtonBox.StandardButton = ... # 0x2000
-        Yes                      : QDialogButtonBox.StandardButton = ... # 0x4000
-        YesToAll                 : QDialogButtonBox.StandardButton = ... # 0x8000
-        No                       : QDialogButtonBox.StandardButton = ... # 0x10000
-        NoToAll                  : QDialogButtonBox.StandardButton = ... # 0x20000
-        Abort                    : QDialogButtonBox.StandardButton = ... # 0x40000
-        Retry                    : QDialogButtonBox.StandardButton = ... # 0x80000
-        Ignore                   : QDialogButtonBox.StandardButton = ... # 0x100000
-        Close                    : QDialogButtonBox.StandardButton = ... # 0x200000
-        Cancel                   : QDialogButtonBox.StandardButton = ... # 0x400000
-        Discard                  : QDialogButtonBox.StandardButton = ... # 0x800000
-        Help                     : QDialogButtonBox.StandardButton = ... # 0x1000000
-        Apply                    : QDialogButtonBox.StandardButton = ... # 0x2000000
-        Reset                    : QDialogButtonBox.StandardButton = ... # 0x4000000
-        LastButton               : QDialogButtonBox.StandardButton = ... # 0x8000000
-        RestoreDefaults          : QDialogButtonBox.StandardButton = ... # 0x8000000
+        NoButton                 : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x0
+        FirstButton              : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x400
+        Ok                       : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x400
+        Save                     : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x800
+        SaveAll                  : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x1000
+        Open                     : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x2000
+        Yes                      : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x4000
+        YesToAll                 : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x8000
+        No                       : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x10000
+        NoToAll                  : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x20000
+        Abort                    : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x40000
+        Retry                    : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x80000
+        Ignore                   : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x100000
+        Close                    : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x200000
+        Cancel                   : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x400000
+        Discard                  : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x800000
+        Help                     : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x1000000
+        Apply                    : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x2000000
+        Reset                    : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x4000000
+        LastButton               : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x8000000
+        RestoreDefaults          : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x8000000
+
+    NoButton                 : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x0
+    FirstButton              : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x400
+    Ok                       : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x400
+    Save                     : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x800
+    SaveAll                  : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x1000
+    Open                     : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x2000
+    Yes                      : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x4000
+    YesToAll                 : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x8000
+    No                       : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x10000
+    NoToAll                  : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x20000
+    Abort                    : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x40000
+    Retry                    : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x80000
+    Ignore                   : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x100000
+    Close                    : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x200000
+    Cancel                   : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x400000
+    Discard                  : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x800000
+    Help                     : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x1000000
+    Apply                    : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x2000000
+    Reset                    : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x4000000
+    LastButton               : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x8000000
+    RestoreDefaults          : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x8000000
 
     class StandardButtons(object): ...
 
