@@ -53,6 +53,7 @@ import typing
 
 
 class QAbstractButton(PySide2.QtWidgets.QWidget):
+    clicked: PySide2.QtCore.Signal
 
     def __init__(self, parent: typing.Optional[PySide2.QtWidgets.QWidget] = ...) -> None: ...
 
@@ -255,6 +256,8 @@ class QAbstractItemView(PySide2.QtWidgets.QAbstractScrollArea):
         ExpandingState           : QAbstractItemView.State = ... # 0x4
         CollapsingState          : QAbstractItemView.State = ... # 0x5
         AnimatingState           : QAbstractItemView.State = ... # 0x6
+
+    clicked: PySide2.QtCore.Signal
 
     def __init__(self, parent: typing.Optional[PySide2.QtWidgets.QWidget] = ...) -> None: ...
 
@@ -1014,6 +1017,8 @@ class QCalendarWidget(PySide2.QtWidgets.QWidget):
         NoVerticalHeader         : QCalendarWidget.VerticalHeaderFormat = ... # 0x0
         ISOWeekNumbers           : QCalendarWidget.VerticalHeaderFormat = ... # 0x1
 
+    clicked: PySide2.QtCore.Signal
+
     def __init__(self, parent: typing.Optional[PySide2.QtWidgets.QWidget] = ...) -> None: ...
 
     def calendar(self) -> PySide2.QtCore.QCalendar: ...
@@ -1762,6 +1767,8 @@ class QDialogButtonBox(PySide2.QtWidgets.QWidget):
     RestoreDefaults          : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x8000000
 
     class StandardButtons(object): ...
+
+    clicked: PySide2.QtCore.Signal
 
     @typing.overload
     def __init__(self, buttons: PySide2.QtWidgets.QDialogButtonBox.StandardButtons, orientation: PySide2.QtCore.Qt.Orientation, parent: typing.Optional[PySide2.QtWidgets.QWidget] = ...) -> None: ...
@@ -4284,6 +4291,7 @@ class QGridLayout(PySide2.QtWidgets.QLayout):
 
 
 class QGroupBox(PySide2.QtWidgets.QWidget):
+    clicked: PySide2.QtCore.Signal
 
     @typing.overload
     def __init__(self, parent: typing.Optional[PySide2.QtWidgets.QWidget] = ...) -> None: ...
