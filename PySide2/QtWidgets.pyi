@@ -1652,6 +1652,9 @@ class QDialog(PySide2.QtWidgets.QWidget):
         Rejected                 : QDialog.DialogCode = ... # 0x0
         Accepted                 : QDialog.DialogCode = ... # 0x1
 
+    accepted: PySide2.QtCore.Signal
+    rejected: PySide2.QtCore.Signal
+
     def __init__(self, parent: typing.Optional[PySide2.QtWidgets.QWidget] = ..., f: PySide2.QtCore.Qt.WindowFlags = ...) -> None: ...
 
     def accept(self) -> None: ...
@@ -1768,7 +1771,9 @@ class QDialogButtonBox(PySide2.QtWidgets.QWidget):
 
     class StandardButtons(object): ...
 
+    accepted: PySide2.QtCore.Signal
     clicked: PySide2.QtCore.Signal
+    rejected: PySide2.QtCore.Signal
 
     @typing.overload
     def __init__(self, buttons: PySide2.QtWidgets.QDialogButtonBox.StandardButtons, orientation: PySide2.QtCore.Qt.Orientation, parent: typing.Optional[PySide2.QtWidgets.QWidget] = ...) -> None: ...
