@@ -1737,6 +1737,8 @@ class QDialogButtonBox(PySide2.QtWidgets.QWidget):
         LastButton               : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x8000000
         RestoreDefaults          : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x8000000
 
+        def __or__(self, other: QDialogButtonBox.StandardButton) -> QDialogButtonBox.StandardButtons: ...
+
     NoButton                 : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x0
     FirstButton              : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x400
     Ok                       : typing.ClassVar[QDialogButtonBox.StandardButton] = ... # 0x400
