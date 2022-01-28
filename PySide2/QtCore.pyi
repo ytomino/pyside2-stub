@@ -9534,7 +9534,6 @@ class Qt(object):
     FuzzyHit                 : Qt = ... # 0x1
     GestureStarted           : Qt = ... # 0x1
     HighEventPriority        : Qt = ... # 0x1
-    Horizontal               : Qt = ... # 0x1
     ISODate                  : Qt = ... # 0x1
     ImEnabled                : Qt = ... # 0x1
     ImhHiddenText            : Qt = ... # 0x1
@@ -9647,7 +9646,6 @@ class Qt(object):
     TouchPointMoved          : Qt = ... # 0x2
     Tuesday                  : Qt = ... # 0x2
     UI_FadeMenu              : Qt = ... # 0x2
-    Vertical                 : Qt = ... # 0x2
     VeryCoarseTimer          : Qt = ... # 0x2
     WA_MouseTracking         : Qt = ... # 0x2
     WhiteSpaceNoWrap         : Qt = ... # 0x2
@@ -11676,8 +11674,11 @@ class Qt(object):
         NavigationModeCursorForceVisible: Qt.NavigationMode = ... # 0x4
 
     class Orientation(object):
-        Horizontal               : Qt.Orientation = ... # 0x1
-        Vertical                 : Qt.Orientation = ... # 0x2
+        Horizontal               : typing.ClassVar[Qt.Orientation] = ... # 0x1
+        Vertical                 : typing.ClassVar[Qt.Orientation] = ... # 0x2
+
+    Horizontal               : typing.ClassVar[Qt.Orientation] = ... # 0x1
+    Vertical                 : typing.ClassVar[Qt.Orientation] = ... # 0x2
 
     class Orientations(object): ...
 
