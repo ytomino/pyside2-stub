@@ -12110,6 +12110,7 @@ class Signal(object):
     @staticmethod
     def __init__(*types: type, name: typing.Optional[str] = ..., arguments: typing.Optional[str] = ...) -> None: ...
 
+    def __get__(self, instance: object, owner: typing.Optional[type] = ...) -> SignalInstance: ...
 
 class SignalInstance(object):
     @staticmethod
